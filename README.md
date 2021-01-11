@@ -1,16 +1,15 @@
-# custom-cxo-activity-dashboard-adobe-target-googlesheets
 
 # Custom Sharable CXO Activity Tracker using Adobe Target and GoogleSheets
 
-Digital Marketing Problem: While Adobe Target Activities page provides list of activities with information such as Activiy-Name and Last Update Date, we wanted to extend it
-a. to add custom meta-data to each activity for more filtering criteria e.g. which team owns the activity or whether its an experimentation/personalisation activity
-b. to be able to filter/sort activities on fields that are not available on Activities List page. One of the most important one is Priority - makes life much easier to see all the activities that have priorities higher than a specific limit 
-c. to easily share this activity-data with other team-members who may not be active Adobe Target users
+**Digital Marketing Problem:** While Adobe Target Activities page provides list of activities with information such as Activiy-Name and Last Update Date, we wanted to extend it
+1. to add custom meta-data to each activity for more filtering criteria e.g. which team owns the activity or whether its an experimentation/personalisation activity
+2. to be able to filter/sort activities on fields that are not available on Activities List page. One of the most important one is Priority - makes life much easier to see all the activities that have priorities higher than a specific limit 
+3. to easily share this activity-data with other team-members who may not be active Adobe Target users
  
 # Technologies used
-AdobeIO APIs
-GoogleSheets API
-Python
+- Adobe IO
+- GoogleSheets API
+- Python
 
 # High-level Steps:
 1. Create an Adobe IO Project with Adobe Target services
@@ -19,7 +18,7 @@ Python
 4. Python code to read activities from Adobe Target using Adobe IO and update Googlesheet
 
 
-Step 1. Create an Adobe IO Project with Adobe Target services
+**Step 1. Create an Adobe IO Project with Adobe Target services**
 A. Follow the instructions on https://helpx.adobe.com/uk/marketing-cloud-core/kb/adobe-io-authentication-step-by-step.html to create an Adobe IO Project.
 
 
