@@ -40,6 +40,6 @@ Test the keypair downloaded in the previous step to generate Access token by cop
 
 **Step 9 - Access Project Credentials**
 Click on Project Overview and click on Service Account (JWT) card under Credentials. You would need these credentials to generate Access Token in your Python code later.
-![new adobe io project overview](https://user-images.githubusercontent.com/71815964/104339341-64345400-54ef-11eb-9f06-d3bf8be01d40.png)
+![new adobe io project overview](https://user-images.githubusercontent.com/71815964/104341538-d1e17f80-54f1-11eb-8648-d4a2ab878593.png)
 ![new adobe io project credentials](https://user-images.githubusercontent.com/71815964/104339337-639bbd80-54ef-11eb-8d29-68bb400cae7b.png)
 
