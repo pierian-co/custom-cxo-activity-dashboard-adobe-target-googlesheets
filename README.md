@@ -33,7 +33,7 @@
 ### <a name="step1"></a> Step 1. Get Credentials of an existing Adobe IO Project or Create a new Adobe IO Project with Adobe Target services
 If you have an existing Adobe IO Project with Adobe Target service, login to Adobe IO Console, select your project and copy credentials from Credentails details page.
 
-![new adobe io project credentials](https://user-images.githubusercontent.com/71815964/104339337-639bbd80-54ef-11eb-8d29-68bb400cae7b.png |windth=400)
+![new adobe io project credentials](https://user-images.githubusercontent.com/71815964/104339337-639bbd80-54ef-11eb-8d29-68bb400cae7b.png | width=400)
 
 If you do not have an existing project,  [create a new Adobe IO Project with Adobe Target services](https://github.com/pierian-co/custom-cxo-activity-dashboard-adobe-target-googlesheets/blob/main/create_adobeioproject_target.md).
 
