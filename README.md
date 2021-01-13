@@ -10,7 +10,7 @@
 ## Prerequisites
 - Access to Adobe Target and profiles you want to report on
 - Developer access to Adobe Target product
-- 
+- Access to  Google Developer Console
 
 ## Technologies used
 - Adobe IO
@@ -23,9 +23,11 @@
 
 [2. Create GoogleSheets](#step2)
 
-[3. Create Google Service Account and enable GoogleSheets and GoogleDrive APIs](#step3)
+[3. Create Google Service Account with GoogleSheets APIs](#step3)
 
-[4. Python code to read activities from Adobe Target using Adobe IO and update Googlesheet](#step4)
+[4. Share GoogleSheets with Google Service Account](#step4)
+
+[5. Python code to read activities from Adobe Target using Adobe IO and update Googlesheet](#step5)
 
 
 ### <a name="step1"></a> Step 1. Get Credentials of an existing Adobe IO Project or Create a new Adobe IO Project with Adobe Target services
@@ -69,3 +71,18 @@ Examples of Custom fields used in this example:
 
 
 ### <a name="step3"></a> Step 3. Create a Google Service Account
+
+Follow [steps to create a Google Service Account](https://github.com/pierian-co/custom-cxo-activity-dashboard-adobe-target-googlesheets/blob/main/create_googleserviceaccount.md). 
+
+### <a name="step4"></a> Step 4. Share GoogleSheets with Google Service Account
+
+For rean and update operations, both Googlesheets must be given access to the Service Account Client email address.
+
+a. Copy client-email address from the JSON file downloaded while creating Google Service Account in Step 3 above.
+
+b. For both GoogleSheets (Credentials and ActivitiesData), click on Share button. Paste and select the client-email address.
+
+![Share GoogleSheets with Google Service Account](https://user-images.githubusercontent.com/71815964/104519810-f886df80-55f1-11eb-9a2b-460314b2c5f8.png)
+
+c. Make sure to provide Editor access to the client-email.
+![Share GoogleSheets with Google Service Account Editor Access](https://user-images.githubusercontent.com/71815964/104519806-f755b280-55f1-11eb-914d-3dd6826819c5.png)
