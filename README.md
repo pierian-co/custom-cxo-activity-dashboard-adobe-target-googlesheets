@@ -18,17 +18,20 @@
 
 
 ## High-level Steps:
-[1. Create an Adobe IO Project with Adobe Target services](#step1)
+[1. Get Credentials of Adobe IO Project](#step1)
+[2. Create GoogleSheets](#step2)
+[3. Create Google Service Account and enable GoogleSheets and GoogleDrive APIs](#step3)
+[4. Python code to read activities from Adobe Target using Adobe IO and update Googlesheet](#step4)
 
-2. Create GoogleSheets
-3. Create Google Service Account and enable GoogleSheets and GoogleDrive APIs
-4. Python code to read activities from Adobe Target using Adobe IO and update Googlesheet
 
+### <a name="step1"></a> Step 1. Get Credentials of an existing Adobe IO Project or Create a new Adobe IO Project with Adobe Target services
+If you have an existing Adobe IO Project with Adobe Target service, login to Adobe IO Console, select your project and copy credentials from Credentails details page.
 
-### <a name="step1"></a> Step 1. Create an Adobe IO Project with Adobe Target services
-Follow the instructions [here](https://github.com/pierian-co/custom-cxo-activity-dashboard-adobe-target-googlesheets/blob/main/create_adobeioproject_target.md) on to create an Adobe IO Project.
+![new adobe io project credentials](https://user-images.githubusercontent.com/71815964/104339337-639bbd80-54ef-11eb-8d29-68bb400cae7b.png)
 
-### Step 2. Create GoogleSheets
+If you do not have an existing project,  [create an Adobe IO Project](https://github.com/pierian-co/custom-cxo-activity-dashboard-adobe-target-googlesheets/blob/main/create_adobeioproject_target.md).
+
+### <a name="step2"></a> Step 2. Create GoogleSheets
 I have used 2 separate GoogleSheets - one to store Credentials to connect to Adobe IO and another to store details of Adobe Target activities. This way we need not worry about Credentials being shared further - only activity data is shared with the recipients. 
 
 **1. Credentials Googlesheet** 
@@ -43,12 +46,8 @@ Fields in Credentials sheet
 - Tech-Account_Id: Technical Account ID from your Adobe IO Project's Credentential page
 - Private-Key-Path: local path of Private Key generated when Adobe IO Project was created (refer to Step 1 details)
 
-**2. Activities Googlesheet**
-Activities Googlesheet contains data related to Adobe Target activities. Template of the sheet can be found here. 
-
-Create a GoogleSheet using the template shown in the link below. 
-https://docs.google.com/spreadsheets/d/1K65VKRYWOJHvLqi5sXBnqX46iR7y9EprtI_glbtAcs4/edit?usp=sharing
+**2. ActivitiesData Googlesheet**
+ActivitiesData Googlesheet contains data related to Adobe Target activities. Here's the [template of ActivitiesData sheet](https://docs.google.com/spreadsheets/d/1lk5btAUQAwO6IfaA4UeqSIF29wnC7zNNvsA_Dyoophw/edit?usp=sharing) I have used in this project.
 
 
-
-### Step 3. Create a Google Service Account
+### <a name="step3"></a> Step 3. Create a Google Service Account
