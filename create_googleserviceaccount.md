@@ -3,7 +3,9 @@
 To read and update data in GoogleSheets using Python requires creating a Google Service Account. Here are steps:
 
 **Step 1 Create a project**
+
 a. Open [Google Developer Console](https://console.developers.google.com/). 
+
 b. Click on Create Project link and provide a name to this project.
 
 ![create Google Service Account add project](https://user-images.githubusercontent.com/71815964/104507254-60332f80-55de-11eb-91db-4eda253c44ab.png)
@@ -12,8 +14,11 @@ b. Click on Create Project link and provide a name to this project.
 
 
 **Step 2 Enable GoogleSheets API**
+
 a. Click on API Library link under API & Services of newly created project. 
+
 b. Search Google Sheet in the search box. 
+
 c. Select Google Sheets API from the search results and click on Enable button to add to the project.
 
 ![create Google Service Account api library](https://user-images.githubusercontent.com/71815964/104508318-f61b8a00-55df-11eb-8f26-2b97be570c23.png)
@@ -24,6 +29,7 @@ c. Select Google Sheets API from the search results and click on Enable button t
 
 
 **Step 3 Create Credentials**
+
 a. Click on Create Credentials button.
 
 ![create Google Service Account create credentails](https://user-images.githubusercontent.com/71815964/104512039-84463f00-55e5-11eb-8426-f25d56222b2b.png)
@@ -46,6 +52,7 @@ e. Select *JSON* as Key type.
 f. Clicking Continue buttons downloads a JSON file which contains key to access GoogleSheets API.
 
 **Step 4 Copy Service Account Client Email address**
+
 In order to update a GoogleSheet, that sheet must be shared with the Service Account created above. This is done by sharing the sheet with Service Account's email-address. Search for *client_email* in the JSON file downloaded in the step above. Client email address should like below:
 
 ![create Google Service Account copy client email](https://user-images.githubusercontent.com/71815964/104516470-4698e480-55ec-11eb-8dc1-4f3ae12f888f.png)
