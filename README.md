@@ -5,6 +5,7 @@
 1. to add custom meta-data to each activity for more filtering criteria e.g. which team owns the activity or whether its an experimentation/personalisation activity
 2. to be able to filter/sort activities on fields that are not available on Activities List page. One of the most important one is Priority - makes life much easier to see all the activities that have priorities higher than a specific limit 
 3. to easily share this activity-dashboard with other team-members who may not be active Adobe Target users
+4. to add visualisation layer on top of activities data using Google Data Studio
  
 ## Prerequisites
 - Access to Adobe Target and profiles you want to report on
@@ -32,7 +33,7 @@ If you have an existing Adobe IO Project with Adobe Target service, login to Ado
 
 ![new adobe io project credentials](https://user-images.githubusercontent.com/71815964/104339337-639bbd80-54ef-11eb-8d29-68bb400cae7b.png)
 
-If you do not have an existing project,  [create an Adobe IO Project](https://github.com/pierian-co/custom-cxo-activity-dashboard-adobe-target-googlesheets/blob/main/create_adobeioproject_target.md).
+If you do not have an existing project,  [create a new Adobe IO Project with Adobe Target services](https://github.com/pierian-co/custom-cxo-activity-dashboard-adobe-target-googlesheets/blob/main/create_adobeioproject_target.md).
 
 ### <a name="step2"></a> Step 2. Create GoogleSheets
 I have used 2 separate GoogleSheets - one to store Credentials to connect to Adobe IO and another to store details of Adobe Target activities. This way we need not worry about Credentials being shared further - only activity data is shared with the recipients. 
@@ -51,6 +52,20 @@ Fields in Credentials sheet
 
 **2. ActivitiesData Googlesheet**
 ActivitiesData Googlesheet contains data related to Adobe Target activities. Here's the [template of ActivitiesData sheet](https://docs.google.com/spreadsheets/d/1lk5btAUQAwO6IfaA4UeqSIF29wnC7zNNvsA_Dyoophw/edit?usp=sharing) I have used in this project.
+
+This GoogleSheet contains 2 types of fields:
+a. Extracted from Adobe Target API: The fields have prefix of AT in the template.
+b. Custom fields: I have added some custom fields examples in the template that can be updated against each activity. Anyone who accesses the dashboard can make use of these custom fields to filter activities e.g. 
+- just show me activities that belong to eCommerce team
+- show me activities that had a clear winning experience
+Additionaly you can add fields that provide further details about an activity. For example, we create a Confluence page for each activity with all details such as Audiences, Screen-shots, Results and so on. Users of the dashboard can click on the link and access more details.
+
+Examples of Custom fields used in this example:
+- Custom-LastDBUpdateDate: Date when details of an activity were updated last
+- Custom-Team: owner team e.g. eCommerce, Marketing, Services
+- Custom-Category: experiment, personalisation or monitoring
+- Custom-ConfluenceLink: Link to the Confluence page with further details of the activity
+- Custom-IsClearWinner: a flag (Yes/No/TBC) whether the activity had a winning experience
 
 
 ### <a name="step3"></a> Step 3. Create a Google Service Account
