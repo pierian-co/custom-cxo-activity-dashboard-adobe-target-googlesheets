@@ -19,8 +19,11 @@
 
 ## High-level Steps:
 [1. Get Credentials of Adobe IO Project](#step1)
+
 [2. Create GoogleSheets](#step2)
+
 [3. Create Google Service Account and enable GoogleSheets and GoogleDrive APIs](#step3)
+
 [4. Python code to read activities from Adobe Target using Adobe IO and update Googlesheet](#step4)
 
 
