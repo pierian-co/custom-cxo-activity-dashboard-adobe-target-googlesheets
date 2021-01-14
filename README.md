@@ -35,7 +35,7 @@ If you have an existing Adobe IO Project with Adobe Target service, login to Ado
 
 If you do not have an existing project,  [create a new Adobe IO Project with Adobe Target services](https://github.com/pierian-co/custom-cxo-activity-dashboard-adobe-target-googlesheets/blob/main/create_adobeioproject_target.md).
 
-![new adobe io project credentials](https://user-images.githubusercontent.com/71815964/104339337-639bbd80-54ef-11eb-8d29-68bb400cae7b.png)
+![new adobe io project credentials](https://user-images.githubusercontent.com/71815964/104570487-e3d63600-5649-11eb-95e1-8a065eef38da.png)
 
 
 ### <a name="step2"></a> Step 2. Create GoogleSheets
