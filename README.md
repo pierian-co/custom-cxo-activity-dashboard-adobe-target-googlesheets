@@ -1,8 +1,8 @@
 
 # Custom Sharable CXO Activity Tracker using Adobe Target and GoogleSheets
 
-**Digital Marketing Problem:** If you use Adobe Target for Experimentation and Personalisation activities, you'd be aware of the Activities Listing page (or Dashboard page) which gives a view of all activities. While this page covers list of activities with information such as Activiy-Name and Last Update Date, we wanted to extend it
-1. to add custom meta-data to each activity for more filtering criteria e.g. which team owns the activity or whether its an experimentation/personalisation activity
+**Digital Marketing Problem:** If you use Adobe Target for Experimentation and Personalisation activities, you'd be aware of the Activities Listing page (or Dashboard page) which gives a view of all activities. While this page covers list of activities with information such as Activity-Name and Last Update Date, we wanted to extend it
+1. to add custom meta-data to each activity for more filtering criteria e.g. which team owns the activity or whether it's an experimentation/personalisation activity
 2. to be able to filter/sort activities on fields that are not available on Activities List page. One of the most important one is Priority - makes life much easier to see all the activities that have priorities higher than a specific limit
 3. to easily share this activity-dashboard with other team-members who may not be active Adobe Target users
 4. to add visualisation layer on top of activities data using Google Data Studio
@@ -27,11 +27,11 @@
 
 [4. Share GoogleSheets with Google Service Account](#step4)
 
-[5. Python code to read activities from Adobe Target using Adobe IO and update Googlesheet](#step5)
+[5. Python code to read activities from Adobe Target using Adobe IO and update GoogleSheet](#step5)
 
 
 ### <a name="step1"></a> Step 1. Get Credentials of an existing Adobe IO Project or Create a new Adobe IO Project with Adobe Target services
-If you have an existing Adobe IO Project with Adobe Target service, login to Adobe IO Console, select your project and copy credentials from Credentails details page.
+If you have an existing Adobe IO Project with Adobe Target service, login to Adobe IO Console, select your project and copy credentials from Credentials details page.
 
 If you do not have an existing project,  [create a new Adobe IO Project with Adobe Target services](https://github.com/pierian-co/custom-cxo-activity-dashboard-adobe-target-googlesheets/blob/main/create_adobeioproject_target.md).
 
@@ -41,27 +41,28 @@ If you do not have an existing project,  [create a new Adobe IO Project with Ado
 ### <a name="step2"></a> Step 2. Create GoogleSheets
 I have used 2 separate GoogleSheets - one to store Credentials to connect to Adobe IO and another to store details of Adobe Target activities. This way we need not worry about Credentials being shared further - only activity data is shared with the recipients. 
 
-**1. Credentials Googlesheet** 
-This Googlesheet contains credentails of the Adobe IO project created on Step 1 above. Here's the [template of Credentials sheet](https://docs.google.com/spreadsheets/d/1nkF3EE3WL0UGhtFFFxjhG1OkDKyGSIBuW6Fd3kcmJa4/edit?usp=sharing)
+**1. Credentials GoogleSheet** 
+This GoogleSheet contains credentials of the Adobe IO project created on Step 1 above. Here's the [template of Credentials sheet](https://docs.google.com/spreadsheets/d/1nkF3EE3WL0UGhtFFFxjhG1OkDKyGSIBuW6Fd3kcmJa4/edit?usp=sharing)
 
 Fields in Credentials sheet
 - Tenant: Adobe Target tenant (you can find it in the URL when you select Adobe Target from Adobe Experience Cloud Console)
 - Target Client Code: Get this under Account details section of Adobe Target console by navigating to Administration > Implementation 
-- X-Api-Key: Client ID from your Adobe IO Project's Credentential page
-- Client-Secret: Get it by clicking on Retrieve client secret button on your Adobe IO Project's Credentential page
-- Adobe-Org-Id: Organization Id from your Adobe IO Project's Credentential page
-- Tech-Account_Id: Technical Account ID from your Adobe IO Project's Credentential page
+- X-Api-Key: Client ID from your Adobe IO Project's Credential page
+- Client-Secret: Get it by clicking on Retrieve client secret button on your Adobe IO Project's Credential page
+- Adobe-Org-Id: Organization Id from your Adobe IO Project's Credential page
+- Tech-Account_Id: Technical Account ID from your Adobe IO Project's Credential page
 - Private-Key-Path: local path of Private Key generated when Adobe IO Project was created (refer to Step 1 details)
 
-**2. ActivitiesData Googlesheet**
-ActivitiesData Googlesheet contains data related to Adobe Target activities. Here's the [template of ActivitiesData sheet](https://docs.google.com/spreadsheets/d/1lk5btAUQAwO6IfaA4UeqSIF29wnC7zNNvsA_Dyoophw/edit?usp=sharing) I have used in this project.
+**2. ActivitiesData GoogleSheet**
+ActivitiesData GoogleSheet contains data related to Adobe Target activities. Here's the [template of ActivitiesData sheet](https://docs.google.com/spreadsheets/d/1lk5btAUQAwO6IfaA4UeqSIF29wnC7zNNvsA_Dyoophw/edit?usp=sharing) I have used in this project.
 
 This GoogleSheet contains 2 types of fields:
 a. Extracted from Adobe Target API: The fields have prefix of AT in the template.
 b. Custom fields: I have added some custom fields examples in the template that can be updated against each activity. Anyone who accesses the dashboard can make use of these custom fields to filter activities e.g. 
 - just show me activities that belong to eCommerce team
 - show me activities that had a clear winning experience
-Additionaly you can add fields that provide further details about an activity. For example, we create a Confluence page for each activity with all details such as Audiences, Screen-shots, Results and so on. Users of the dashboard can click on the link and access more details.
+
+Additionally you can add fields that provide further details about an activity. For example, we create a Confluence page for each activity with all details such as Audiences, Screen-shots, Results and so on. Users of the dashboard can click on the link and access more details.
 
 Examples of Custom fields used in this example:
 - Custom-LastDBUpdateDate: Date when details of an activity were updated last
@@ -77,7 +78,7 @@ Follow [steps to create a Google Service Account](https://github.com/pierian-co/
 
 ### <a name="step4"></a> Step 4. Share GoogleSheets with Google Service Account
 
-For rean and update operations, both Googlesheets must be given access to the Service Account Client email address.
+For read and update operations, both GoogleSheets must be given access to the Service Account Client email address.
 
 a. Copy client-email address from the JSON file downloaded while creating Google Service Account in Step 3 above.
 
@@ -87,3 +88,23 @@ b. For both GoogleSheets (Credentials and ActivitiesData), click on Share button
 
 c. Make sure to provide Editor access to the client-email.
 ![Share GoogleSheets with Google Service Account Editor Access](https://user-images.githubusercontent.com/71815964/104573412-c3f44180-564c-11eb-81ce-c528fa7eb422.png)
+
+### <a name="step5"></a> Step 5. Execute the Python code
+
+a. Python code when executed first, updates the ActivitiesData GoogleSheet with activities-details from Adobe Target's [Activities-List API] (https://developers.adobetarget.com/api/#list-activities).
+
+b. You can update the ActivitiesData sheet with data for custom-fields.
+
+c. On subsequent runs, Python code
+- adds new activities to the bottom of the sheet (ones that don't exist already)
+- updates existing activities
+
+### <a name="step6"></a> Step 6. Share the ActivitiesData GoogleSheet
+
+Now you have the data in GoogleSheets, you can share it further with other colleagues. 
+
+You can also use it with Google Data Studio to build visualisations. 
+
+
+
+
