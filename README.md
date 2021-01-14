@@ -86,4 +86,4 @@ b. For both GoogleSheets (Credentials and ActivitiesData), click on Share button
 ![Share GoogleSheets with Google Service Account](https://user-images.githubusercontent.com/71815964/104570760-3b74a180-564a-11eb-97ae-899c8aebaaa9.png)
 
 c. Make sure to provide Editor access to the client-email.
-![Share GoogleSheets with Google Service Account Editor Access](https://user-images.githubusercontent.com/71815964/104519806-f755b280-55f1-11eb-914d-3dd6826819c5.png)
+![Share GoogleSheets with Google Service Account Editor Access](https://user-images.githubusercontent.com/71815964/104573412-c3f44180-564c-11eb-81ce-c528fa7eb422.png)
