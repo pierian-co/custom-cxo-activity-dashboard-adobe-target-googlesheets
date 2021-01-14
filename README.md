@@ -1,9 +1,9 @@
 
 # Custom Sharable CXO Activity Tracker using Adobe Target and GoogleSheets
 
-**Digital Marketing Problem:** While Adobe Target Activities page provides list of activities with information such as Activiy-Name and Last Update Date, we wanted to extend it
+**Digital Marketing Problem:** If you use Adobe Target for Experimentation and Personalisation activities, you'd be aware of the Activities Listing page (or Dashboard page) which gives a view of all activities. While this page covers list of activities with information such as Activiy-Name and Last Update Date, we wanted to extend it
 1. to add custom meta-data to each activity for more filtering criteria e.g. which team owns the activity or whether its an experimentation/personalisation activity
-2. to be able to filter/sort activities on fields that are not available on Activities List page. One of the most important one is Priority - makes life much easier to see all the activities that have priorities higher than a specific limit 
+2. to be able to filter/sort activities on fields that are not available on Activities List page. One of the most important one is Priority - makes life much easier to see all the activities that have priorities higher than a specific limit
 3. to easily share this activity-dashboard with other team-members who may not be active Adobe Target users
 4. to add visualisation layer on top of activities data using Google Data Studio
  
@@ -84,7 +84,7 @@ a. Copy client-email address from the JSON file downloaded while creating Google
 
 b. For both GoogleSheets (Credentials and ActivitiesData), click on Share button. Paste and select the client-email address.
 
-![Share GoogleSheets with Google Service Account](https://user-images.githubusercontent.com/71815964/104519810-f886df80-55f1-11eb-9a2b-460314b2c5f8.png | width=400)
+![Share GoogleSheets with Google Service Account](https://user-images.githubusercontent.com/71815964/104519810-f886df80-55f1-11eb-9a2b-460314b2c5f8.png)
 
 c. Make sure to provide Editor access to the client-email.
-![Share GoogleSheets with Google Service Account Editor Access](https://user-images.githubusercontent.com/71815964/104519806-f755b280-55f1-11eb-914d-3dd6826819c5.png | width=400)
+![Share GoogleSheets with Google Service Account Editor Access](https://user-images.githubusercontent.com/71815964/104519806-f755b280-55f1-11eb-914d-3dd6826819c5.png)
