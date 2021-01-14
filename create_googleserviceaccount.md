@@ -39,7 +39,7 @@ b. Select following options on Credentials screen:
 - What data will you be accessing? *Application data*
 - Are you planning to use this API with App Engine or Compute Engine? *No, I’m not using them*
 
-![create Google Service Account create credentails options](https://user-images.githubusercontent.com/71815964/104512035-83ada880-55e5-11eb-808b-5fa722b3ddc0.png)
+![create Google Service Account create credentials options](https://user-images.githubusercontent.com/71815964/104512035-83ada880-55e5-11eb-808b-5fa722b3ddc0.png)
 
 c. Give a name to your Service Account. 
 
