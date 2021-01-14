@@ -83,7 +83,7 @@ a. Copy client-email address from the JSON file downloaded while creating Google
 
 b. For both GoogleSheets (Credentials and ActivitiesData), click on Share button. Paste and select the client-email address.
 
-![Share GoogleSheets with Google Service Account](https://user-images.githubusercontent.com/71815964/104519810-f886df80-55f1-11eb-9a2b-460314b2c5f8.png)
+![Share GoogleSheets with Google Service Account](https://user-images.githubusercontent.com/71815964/104568313-d8820b00-5647-11eb-8275-6f946dbd165b.png)
 
 c. Make sure to provide Editor access to the client-email.
 ![Share GoogleSheets with Google Service Account Editor Access](https://user-images.githubusercontent.com/71815964/104519806-f755b280-55f1-11eb-914d-3dd6826819c5.png)
