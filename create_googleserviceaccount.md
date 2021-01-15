@@ -14,6 +14,8 @@ To read and update data in GoogleSheets using Python requires creating a Google 
 
 5.  Copy Service Account client-email address
 
+> NOTE: GoogleSheets API is free to use but there are usage limits. Please refer to https://developers.google.com/sheets/api/limits for more details.
+
 ## Detailed steps
 
 **Step 1 Create a project**
