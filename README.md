@@ -112,7 +112,7 @@ The steps we have taken so far would not be very beneficial until code is execut
 
 For GCP, I have used Cloud Functions to deploy Python script on cloud, Cloud Scheduler to run a job recurrently and Pub-Sub to act as mediator between Functions and Scheduler.
 
-Here are detailed steps on scheduling Python script using GCP.
+Here are [detailed steps on scheduling Python script using GCP](https://github.com/pierian-co/execute-python-script-recurrently-gcp)
 
 You'd need four files:
 1. main.py - Python script
