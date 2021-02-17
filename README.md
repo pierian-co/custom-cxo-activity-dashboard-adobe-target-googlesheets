@@ -16,6 +16,7 @@
 - Adobe IO
 - GoogleSheets API
 - Python
+- Google Data Studio
 
 
 ## High-level Steps:
@@ -28,6 +29,12 @@
 [4. Share GoogleSheets with Google Service Account](#step4)
 
 [5. Python code to read activities from Adobe Target using Adobe IO and update GoogleSheet](#step5)
+
+[6. Schedule Python code to run recurrently using GCP Cloud Functions, Cloud Scheduler and Pub-Sub](#step6)
+
+[7. Visualise activities data using Google Data Studio](#step7)
+
+[8. Share GoogleSheet and Data Studio Dashboard](#step8)
 
 
 ### <a name="step1"></a> Step 1. Get Credentials of an existing Adobe IO Project or Create a new Adobe IO Project with Adobe Target services
@@ -99,12 +106,20 @@ c. On subsequent runs, Python code
 - adds new activities to the bottom of the sheet (ones that don't exist already)
 - updates existing activities
 
-### <a name="step6"></a> Step 6. Share the ActivitiesData GoogleSheet
+### <a name="step7"></a> Step 7. Schedule Python code to run recurrently
 
-Now you have the data in GoogleSheets, you can share it further with other colleagues. 
+The steps we have taken so far would not be very beneficial until code is executed recurrently in automated way. For this I have used Google Cloud Platform however all enterprise Cloud platforms provide this capability.
 
-You can also use it with Google Data Studio to build visualisations. 
+For GCP, I have used Cloud Functions to deploy Python script on cloud, Cloud Scheduler to run a job recurrently and Pub-Sub to act as mediator between Functions and Scheduler.
 
+Here are detailed steps on scheduling Python script using GCP.
 
+You'd need four files:
+1. main.py - Python script
+2. requirements.txt - To declare dependencies
+3. Service Account JSON - The JSON file downloaded as part of [Step 3](#step3)
+4. Adobe IO Project Private key - Private key for generating JWT, downloaded as part of [Step 1](#step1)
 
+### <a name="step8"></a> Step 8. Share the ActivitiesData GoogleSheet and Data Studio Visualisation
 
+Now you have the data in GoogleSheets and Data Studio, you can share it further with other colleagues.
