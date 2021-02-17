@@ -1,5 +1,5 @@
 
-# Custom Sharable CXO Activity Tracker using Adobe Target and GoogleSheets
+# Custom, sharable CXO Activity Dashboard using Adobe Target and GoogleSheets
 
 **Digital Marketing Problem:** If you use Adobe Target for Experimentation and Personalisation activities, you'd be aware of the Activities Listing page (or Dashboard page) which gives a view of all activities. While this page covers list of activities with information such as Activity-Name and Last Update Date, we wanted to extend it
 1. to add custom meta-data to each activity for more filtering criteria e.g. which team owns the activity or whether it's an experimentation/personalisation activity
