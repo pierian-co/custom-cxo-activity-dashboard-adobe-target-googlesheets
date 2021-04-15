@@ -106,7 +106,7 @@ c. On subsequent runs, Python code
 - adds new activities to the bottom of the sheet (ones that don't exist already)
 - updates existing activities
 
-### <a name="step7"></a> Step 7. Schedule Python code to run recurrently
+### <a name="step6"></a> Step 6. Schedule Python code to run recurrently
 
 The steps we have taken so far would not be very beneficial until code is executed recurrently in automated way. For this I have used Google Cloud Platform however all enterprise Cloud platforms provide this capability.
 
@@ -119,6 +119,10 @@ You'd need four files:
 2. requirements.txt - To declare dependencies
 3. Service Account JSON - The JSON file downloaded as part of [Step 3](#step3)
 4. Adobe IO Project Private key - Private key for generating JWT, downloaded as part of [Step 1](#step1)
+
+### <a name="step7"></a> Step 7. Visualise data using Google Data Studio
+
+Google Data Studio has in-built connector to Google Sheets which makes visualisation much easier.
 
 ### <a name="step8"></a> Step 8. Share the ActivitiesData GoogleSheet and Data Studio Visualisation
 
